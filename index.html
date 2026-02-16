@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assore Squash Series | The Digital Stadium</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@400;500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <header class="header" id="main-header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/images/logo/assore.png" alt="Assore Squash Series">
+                </a>
+                
+                <nav class="nav" id="main-nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#">Series</a></li>
+                        <li class="nav__item"><a href="rankings.html">Rankings</a></li>
+                        <li class="nav__item"><a href="#">Tournaments</a></li>
+                        <li class="nav__item"><a href="#">Media</a></li>
+                        <li class="nav__item"><a href="#">Resources</a></li>
+                        <li class="nav__item"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header__actions">
+                    <a href="#" class="btn-live">
+                        <span class="live-indicator"></span>
+                        Live Scores
+                    </a>
+                </div>
+                
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <aside class="live-ticker" id="live-ticker">
+        <div class="live-ticker__container">
+            <div class="live-ticker__label">
+                <span class="live-indicator"></span>
+                <span class="live-ticker__text">LIVE NOW</span>
+            </div>
+            
+            <div class="live-ticker__matches">
+                <div class="ticker-scroll">
+                    </div>
+            </div>
+            
+            <button class="live-ticker__close" aria-label="Close Live Ticker">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 1L1 13M1 1L13 13" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </aside>
+
+    
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__content">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li><a href="#">Series</a></li>
+                    <li><a href="rankings.html">Rankings</a></li>
+                    <li><a href="#">Tournaments</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            
+            <div class="hero__slider">
+                <div class="slide" style="background-image: url('assets/images/hero-bg-1.jpg');"></div>
+                <div class="slide" style="background-image: url('assets/images/hero-bg-2.jpg');"></div>
+                <div class="slide" style="background-image: url('assets/images/hero-bg-3.jpg');"></div>
+            </div>
+
+            <div class="hero__overlay"></div> <div class="container hero__content">
+                <span class="hero__tagline">The Digital Stadium</span>
+                <h1 class="hero__title">
+                    UNLEASH THE <span class="text-highlight">POWER</span><br>
+                    OF SQUASH
+                </h1>
+                <p class="hero__subtitle">
+                    Experience the intensity of the Assore Squash Series. 
+                    Live rankings, match schedules, and exclusive coverage.
+                </p>
+                <div class="hero__actions">
+                    <a href="#tournaments" class="btn btn--primary">View Tournaments</a>
+                    <a href="#rankings" class="btn btn--outline">Check Rankings</a>
+                </div>
+            </div>
+        </section>
+
+        <!--Upcoming Tornaments-->
+
+        <section class="section section--dark" id="tournaments">
+            <div class="container-fluid"> <div class="section-header" style="padding-left: 2rem;">
+                    <h2 class="section-title">
+                        Upcoming <span class="text-highlight">Battles</span>
+                    </h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="tournaments-track">
+                    
+                    <article class="card card--compact">
+                        <div class="card__image">
+                            <img src="assets/images/venues/joburg.jpg" alt="Joburg Open">
+                            <div class="card__badge">OPEN NOW</div>
+                        </div>
+                        <div class="card__content">
+                            <div class="card__meta">
+                                <span>Johannesburg</span>
+                                <span>Mar 12-15</span>
+                            </div>
+                            <h3 class="card__title">The Joburg Open</h3>
+                            <div class="card__footer">
+                                <span class="prize-money">R 50k</span>
+                                <a href="#" class="btn-text">Enter &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card card--compact">
+                        <div class="card__image">
+                            <img src="assets/images/venues/capetown.jpg" alt="Cape Town Classic">
+                        </div>
+                        <div class="card__content">
+                            <div class="card__meta">
+                                <span>Cape Town</span>
+                                <span>Apr 05-09</span>
+                            </div>
+                            <h3 class="card__title">Cape Town Classic</h3>
+                            <div class="card__footer">
+                                <span class="prize-money">R 75k</span>
+                                <a href="#" class="btn-text">Details &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card card--compact">
+                        <div class="card__image">
+                            <img src="assets/images/venues/durban.jpg" alt="Durban Slam">
+                        </div>
+                        <div class="card__content">
+                            <div class="card__meta">
+                                <span>Durban</span>
+                                <span>May 20-24</span>
+                            </div>
+                            <h3 class="card__title">The Durban Slam</h3>
+                            <div class="card__footer">
+                                <span class="prize-money">R 40k</span>
+                                <a href="#" class="btn-text">Info &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card card--compact">
+                        <div class="card__image">
+                            <img src="assets/images/venues/pretoria.jpg" alt="Pretoria Challenge">
+                        </div>
+                        <div class="card__content">
+                            <div class="card__meta">
+                                <span>Pretoria</span>
+                                <span>Jun 15-18</span>
+                            </div>
+                            <h3 class="card__title">Pretoria Challenge</h3>
+                            <div class="card__footer">
+                                <span class="prize-money">R 45k</span>
+                                <a href="#" class="btn-text">Info &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card card--compact">
+                        <div class="card__image">
+                            <img src="assets/images/venues/bloem.jpg" alt="Bloemfontein Open">
+                        </div>
+                        <div class="card__content">
+                            <div class="card__meta">
+                                <span>Bloemfontein</span>
+                                <span>Jul 01-04</span>
+                            </div>
+                            <h3 class="card__title">Bloem Open</h3>
+                            <div class="card__footer">
+                                <span class="prize-money">R 30k</span>
+                                <a href="#" class="btn-text">Info &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Rankings Section-->
+
+        <section class="section" id="rankings" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                
+                <div class="section-header">
+                    <h2 class="section-title">Official <span class="text-highlight">Rankings</span></h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="rankings-grid">
+                    
+                    <div class="ranking-card">
+                        <div class="ranking-header">
+                            <h3>Men's Standings</h3>
+                            <a href="#" class="btn-link">Full Table &rarr;</a>
+                        </div>
+                        
+                        <div class="rank-one">
+                            <div class="rank-one__image">
+                                <img src="assets/images/players/men-1.jpg" alt="Men's #1">
+                                <div class="rank-badge">#1</div>
+                            </div>
+                            <div class="rank-one__info">
+                                <h4>J. Anderson</h4>
+                                <span class="points">12,500 pts</span>
+                            </div>
+                        </div>
+
+                        <ul class="rank-list">
+                            <li>
+                                <span class="rank-num">2</span>
+                                <span class="player-name">M. Le Roux</span>
+                                <span class="player-pts">11,200</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">3</span>
+                                <span class="player-name">S. Brownlee</span>
+                                <span class="player-pts">10,800</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">4</span>
+                                <span class="player-name">D. Smith</span>
+                                <span class="player-pts">9,500</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">5</span>
+                                <span class="player-name">K. Naidoo</span>
+                                <span class="player-pts">9,100</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ranking-card">
+                        <div class="ranking-header">
+                            <h3>Women's Standings</h3>
+                            <a href="#" class="btn-link">Full Table &rarr;</a>
+                        </div>
+                        
+                        <div class="rank-one">
+                            <div class="rank-one__image">
+                                <img src="assets/images/players/women-1.jpg" alt="Women's #1">
+                                <div class="rank-badge">#1</div>
+                            </div>
+                            <div class="rank-one__info">
+                                <h4>T. Russell</h4>
+                                <span class="points">13,100 pts</span>
+                            </div>
+                        </div>
+
+                        <ul class="rank-list">
+                            <li>
+                                <span class="rank-num">2</span>
+                                <span class="player-name">A. Venter</span>
+                                <span class="player-pts">11,800</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">3</span>
+                                <span class="player-name">L. Khumalo</span>
+                                <span class="player-pts">10,500</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">4</span>
+                                <span class="player-name">C. Johnson</span>
+                                <span class="player-pts">9,900</span>
+                            </li>
+                            <li>
+                                <span class="rank-num">5</span>
+                                <span class="player-name">B. Mokoena</span>
+                                <span class="player-pts">9,250</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Partners Section-->
+
+        <div class="partners-strip">
+            <div class="container">
+            <span class="partners-label">Official Partners</span>
+            <div class="partners-grid">
+            <img src="assets/images/partners/partner-1.png" alt="PSA" class="partner-logo">
+            
+                        <img src="assets/images/partners/partner-2.png" alt="Park-View" class="partner-logo">
+                        
+                        <img src="assets/images/partners/partner-3.png" alt="Squash Academy" class="partner-logo">
+                        
+                        <img src="assets/images/partners/partner-4.png" alt="Squash SA" class="partner-logo">
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__grid">
+                        
+                        <div class="footer__col">
+                            <img src="assets/images/logo/assore.png" alt="Assore Squash" class="footer__logo">
+                            <p class="footer__text">
+                                The Digital Stadium of South African Squash. 
+                                Elevating the game, one rally at a time.
+                            </p>
+                            <div class="social-links">
+                                <a href="#" class="social-icon fb" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon x" aria-label="X (Twitter)">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon tiktok" aria-label="TikTok">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+                                <a href="#" class="social-icon insta" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+            
+                        <div class="footer__col">
+                            <h4 class="footer__title">Series</h4>
+                            <ul class="footer__nav">
+                                <li><a href="#">Tournaments</a></li>
+                                <li><a href="#">Rankings</a></li>
+                                <li><a href="#">Players</a></li>
+                                <li><a href="#">Results</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="footer__col">
+                            <h4 class="footer__title">Information</h4>
+                            <ul class="footer__nav">
+                                <li><a href="#">About Assore</a></li>
+                                <li><a href="#">Rule Book</a></li>
+                                <li><a href="#">Media Center</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="footer__col">
+                            <h4 class="footer__title">Stay Updated</h4>
+                            <p class="footer__text">Get match results and updates directly to your inbox.</p>
+                            <form class="footer__form" onsubmit="event.preventDefault();">
+                                <input type="email" placeholder="Enter your email" class="footer__input">
+                                <button type="submit" class="btn-footer">Go</button>
+                            </form>
+                        </div>
+            
+                    </div>
+            
+                    <div class="footer__bottom">
+                        <p>
+                            &copy; 2026 Assore Squash Series. 
+                            Powered by <a href="https://muttley.co.za/" target="_blank" class="muttley-link">Muttley Industries</a>.
+                        </p>
+                        <div class="footer__legal">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Use</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+    </main>
+
+           
+
+    <script src="assets/js/live-ticker.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

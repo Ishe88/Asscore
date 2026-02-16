@@ -1,0 +1,28 @@
+/* assets/css/variables.css */
+:root {
+  /* Brand Colors */
+  --assore-red: #E31E24;
+  --assore-cyan: #5CC2E8;
+  --assore-blue: #1B4E9B;
+  
+  /* Backgrounds */
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #242424;
+  --bg-overlay: rgba(26, 26, 26, 0.95); /* For the mobile menu */
+  
+  /* Text Colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #B0B0B0;
+  
+  /* Fonts */
+  --font-headline: 'Oswald', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing & Layout */
+  --container-xl: 1280px;
+  --header-height: 80px; /* Increased for Big Logo */
+  
+  /* Transitions */
+  --duration-fast: 200ms;
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+}

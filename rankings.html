@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankings | Assore Squash Series</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Oswald:wght@400;500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/rankings.css">
+</head>
+<body>
+
+    <header class="header" id="main-header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo">
+                    <img src="assets/images/logo/assore.png" alt="Assore Squash Series">
+                </a>
+                
+                <nav class="nav" id="main-nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html">Series</a></li>
+                        <li class="nav__item"><a href="rankings.html" class="active">Rankings</a></li>
+                        <li class="nav__item"><a href="#">Tournaments</a></li>
+                        <li class="nav__item"><a href="#">Media</a></li>
+                        <li class="nav__item"><a href="#">Resources</a></li>
+                        <li class="nav__item"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header__actions">
+                    <a href="#" class="btn-live">
+                        <span class="live-indicator"></span>
+                        Live Scores
+                    </a>
+                </div>
+                
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu__inner">
+                <nav class="mobile-nav">
+                    <ul class="mobile-nav__list">
+                        <li><a href="index.html">Series</a></li>
+                        <li><a href="rankings.html">Rankings</a></li>
+                        <li><a href="#">Tournaments</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="rankings-hero">
+            <div class="rankings-hero__overlay"></div>
+            <div class="container rankings-hero__content">
+                <h1 class="rankings-hero__title">Season <span class="text-highlight">Standings</span></h1>
+                <p class="rankings-hero__subtitle">The race to the Assore Grand Final starts here.</p>
+                <div class="rankings-hero__stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat__num">8</span>
+                        <span class="hero-stat__label">Events</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat__num">120+</span>
+                        <span class="hero-stat__label">Athletes</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat__num">R500k</span>
+                        <span class="hero-stat__label">Prize Pool</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rankings-interface">
+            <div class="container">
+                
+                <div class="ranking-tabs">
+                    <button class="tab-btn active" data-tab="men">
+                        <i class="fa-solid fa-person"></i> Men's Series
+                    </button>
+                    <button class="tab-btn" data-tab="women">
+                        <i class="fa-solid fa-person-dress"></i> Women's Series
+                    </button>
+                </div>
+
+                <div id="tab-men" class="ranking-content active">
+                    
+                    <div class="spotlight-grid">
+                        <div class="spotlight-card">
+                            <div class="spotlight-card__bg"></div>
+                            <div class="spotlight-card__content">
+                                <div class="spotlight-header">
+                                    <span class="rank-badge">#1</span>
+                                    <span class="series-label">Men's Leader</span>
+                                </div>
+                                <div class="spotlight-player">
+                                    <img src="assets/images/players/men-1.png" alt="Dewald van Niekerk" class="player-img" onerror="this.src='https://placehold.co/400x500/1a1a1a/FFF?text=Player+Image'">
+                                    <div class="player-info">
+                                        <h2>Dewald van Niekerk</h2>
+                                        <p class="club">South Africa</p>
+                                    </div>
+                                </div>
+                                <div class="spotlight-footer">
+                                    <div class="big-points">12,450 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th class="th-rank">Rank</th>
+                                    <th class="th-player">Player</th>
+                                    <th class="th-points">Points</th>
+                                    <th class="th-move">Form</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td-rank">2</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Jean-Pierre Brits</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">10,200</td>
+                                    <td class="td-move"><i class="fa-solid fa-caret-up text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">3</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Christo Potgieter</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">9,850</td>
+                                    <td class="td-move"><i class="fa-solid fa-minus text-muted"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">4</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Ruan Olivier</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">8,400</td>
+                                    <td class="td-move"><i class="fa-solid fa-caret-down text-danger"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">5</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Tristan Worth</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">7,100</td>
+                                    <td class="td-move"><i class="fa-solid fa-caret-up text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">6</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Matthew Lai</span><span class="flag">HKG</span></div></td>
+                                    <td class="td-points">6,800</td>
+                                    <td class="td-move"><i class="fa-solid fa-minus text-muted"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">7</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Damian Groenewald</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">6,400</td>
+                                    <td class="td-move"><i class="fa-solid fa-caret-up text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">8</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Kundanji Kalengo</span><span class="flag">ZAM</span></div></td>
+                                    <td class="td-points">6,150</td>
+                                    <td class="td-move"><i class="fa-solid fa-caret-down text-danger"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">9</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Jonty Matthys</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">5,900</td>
+                                    <td class="td-move"><i class="fa-solid fa-minus text-muted"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="tab-women" class="ranking-content">
+                    
+                    <div class="spotlight-grid">
+                        <div class="spotlight-card">
+                            <div class="spotlight-card__bg"></div>
+                            <div class="spotlight-card__content">
+                                <div class="spotlight-header">
+                                    <span class="rank-badge">#1</span>
+                                    <span class="series-label">Women's Leader</span>
+                                </div>
+                                <div class="spotlight-player">
+                                    <img src="assets/images/players/women-1.png" alt="Alexandra Fuller" class="player-img" onerror="this.src='https://placehold.co/400x500/1a1a1a/FFF?text=Player+Image'">
+                                    <div class="player-info">
+                                        <h2>Alexandra Fuller</h2>
+                                        <p class="club">South Africa</p>
+                                    </div>
+                                </div>
+                                <div class="spotlight-footer">
+                                    <div class="big-points">11,200 <span>PTS</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th class="th-rank">Rank</th>
+                                    <th class="th-player">Player</th>
+                                    <th class="th-points">Points</th>
+                                    <th class="th-move">Form</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="td-rank">2</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Lizelle Muller</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">9,100</td>
+                                    <td class="td-move"><i class="fa-solid fa-minus text-muted"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">3</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Cheyna Wood</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">8,650</td>
+                                    <td class="td-move"><i class="fa-solid fa-caret-up text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">4</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Hayley Ward</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">7,800</td>
+                                    <td class="td-move"><i class="fa-solid fa-caret-up text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">5</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Alexa Pienaar</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">7,200</td>
+                                    <td class="td-move"><i class="fa-solid fa-caret-down text-danger"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">6</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Teagan Roux</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">6,950</td>
+                                    <td class="td-move"><i class="fa-solid fa-minus text-muted"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">7</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Siobhan Beattie</span><span class="flag">SCO</span></div></td>
+                                    <td class="td-points">6,400</td>
+                                    <td class="td-move"><i class="fa-solid fa-caret-up text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">8</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Awande Mwashe</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">6,100</td>
+                                    <td class="td-move"><i class="fa-solid fa-caret-down text-danger"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="td-rank">9</td>
+                                    <td class="td-player"><div class="player-flex"><span class="name">Savannah Ingledew</span><span class="flag">RSA</span></div></td>
+                                    <td class="td-points">5,800</td>
+                                    <td class="td-move"><i class="fa-solid fa-minus text-muted"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                
+                <div class="footer__col">
+                    <a href="index.html" class="footer__logo">
+                        <img src="assets/images/logo/assore.png" alt="Assore Squash Series">
+                    </a>
+                    <p class="footer__text">
+                        The official platform of the Assore Squash Series. Elevating South African squash to the global stage.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon insta" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon tiktok" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="social-icon x" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+    
+                <div class="footer__col">
+                    <h4 class="footer__title">Series</h4>
+                    <ul class="footer__nav">
+                        <li><a href="rankings.html">Rankings</a></li>
+                        <li><a href="#">Tournaments</a></li>
+                        <li><a href="#">Athletes</a></li>
+                        <li><a href="#">Rules</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer__col">
+                    <h4 class="footer__title">Support</h4>
+                    <ul class="footer__nav">
+                        <li><a href="#">Media Centre</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer__col">
+                    <h4 class="footer__title">Stay Updated</h4>
+                    <p class="footer__text">Get match results and updates directly to your inbox.</p>
+                    <form class="footer__form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Email address" class="footer__input">
+                        <button type="submit" class="btn-footer">GO</button>
+                    </form>
+                </div>
+    
+            </div>
+    
+            <div class="footer__bottom">
+                <p>
+                    &copy; 2026 Assore Squash Series. 
+                    Powered by <a href="https://muttley.co.za/" target="_blank" class="muttley-link">Muttley Industries</a>.
+                </p>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/live-ticker.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/rankings.js"></script>
+</body>
+</html>

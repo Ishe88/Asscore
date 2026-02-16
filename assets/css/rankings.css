@@ -1,0 +1,377 @@
+/* assets/css/rankings.css */
+
+/* --- HERO SECTION --- */
+.rankings-hero {
+    position: relative;
+    /* Ensure this image path is correct in your folder */
+    background-image: url('../images/hero/rankings-hero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    padding: 8rem 0 4rem;
+    color: white;
+    text-align: center;
+    border-bottom: 4px solid var(--assore-red);
+}
+
+/* Dark overlay to make text pop */
+.rankings-hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 26, 0.85); /* Deep dark tint */
+    z-index: 1;
+}
+
+.rankings-hero__content {
+    position: relative;
+    z-index: 2;
+}
+
+.rankings-hero__title {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -2px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.rankings-hero__subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.rankings-hero__stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stat__num {
+    font-family: var(--font-headline);
+    font-size: 2.5rem;
+    color: var(--assore-cyan);
+    line-height: 1;
+}
+
+.hero-stat__label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* --- RANKINGS INTERFACE --- */
+.rankings-interface {
+    padding: 4rem 0;
+    background-color: var(--bg-primary);
+}
+
+/* --- TABS --- */
+.ranking-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 1px solid var(--border-primary, #444);
+    color: var(--text-secondary);
+    padding: 1rem 2.5rem;
+    font-family: var(--font-headline);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tab-btn i {
+    font-size: 0.9rem;
+}
+
+.tab-btn:hover {
+    border-color: var(--assore-cyan);
+    color: white;
+}
+
+.tab-btn.active {
+    background-color: var(--assore-red);
+    border-color: var(--assore-red);
+    color: white;
+    box-shadow: 0 0 15px rgba(227, 30, 36, 0.4);
+}
+
+/* --- TAB CONTENT LOGIC --- */
+.ranking-content {
+    display: none;
+    animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ranking-content.active {
+    display: block;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- SPOTLIGHT (#1 Player) --- */
+.spotlight-grid {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.spotlight-card {
+    background: linear-gradient(135deg, #242424 0%, #1a1a1a 100%);
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.spotlight-card__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 20px);
+    opacity: 0.1;
+}
+
+.spotlight-card__content {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.spotlight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+}
+
+.rank-badge {
+    background: #FFD700; /* Gold */
+    color: black;
+    font-weight: 800;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2px;
+    font-family: var(--font-headline);
+}
+
+.series-label {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+}
+
+.player-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFD700;
+    margin-bottom: 1.5rem;
+}
+
+.spotlight-player h2 {
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+}
+
+.spotlight-player .club {
+    color: var(--assore-cyan);
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.spotlight-footer {
+    margin-top: 2rem;
+    background: rgba(0,0,0,0.3);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.big-points {
+    font-family: var(--font-mono);
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 700;
+}
+
+.big-points span {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* --- TABLE WRAPPER --- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.data-table th {
+    background: #151515;
+    text-align: left;
+    padding: 1.25rem;
+    color: var(--text-secondary);
+    font-family: var(--font-headline);
+    text-transform: uppercase;
+    font-weight: 400;
+    border-bottom: 2px solid var(--assore-red);
+}
+
+.data-table td {
+    padding: 1.25rem;
+    border-bottom: 1px solid #333;
+    vertical-align: middle;
+}
+
+/* Row Hover Effects */
+.data-table tbody tr {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+.data-table tbody tr:hover {
+    background-color: #2E2E2E;
+    transform: scale(1.01);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    border-left: 4px solid var(--assore-red);
+}
+
+.data-table tbody tr:hover .name {
+    color: var(--assore-cyan);
+}
+
+/* Table Columns */
+.th-rank, .td-rank {
+    width: 80px;
+    text-align: center;
+    font-family: var(--font-headline);
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.player-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-flex .name {
+    font-weight: 700;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.player-flex .flag {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.td-points {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    color: var(--assore-cyan);
+}
+
+.td-move {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/* Utility Colors for icons */
+.text-success { color: #4ade80; }
+.text-danger { color: var(--assore-red); }
+.text-muted { color: var(--text-secondary); }
+
+/* --- MOBILE TABLE FIXES --- */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+    position: relative;
+    margin-top: 1rem;
+    padding-bottom: 5px; /* Space for scrollbar */
+    box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.5); /* Shadow hint */
+}
+
+/* Ensure cut-off line is visible */
+.data-table tbody tr:nth-child(8) td {
+    border-bottom: 2px dashed var(--assore-cyan);
+}
+
+/* Mobile Sticky Logic (< 768px) */
+@media (max-width: 768px) {
+    .rankings-hero__title { font-size: 2.5rem; }
+    .rankings-hero__stats { flex-direction: column; gap: 1.5rem; }
+
+    /* 1. Stick the Rank (Left 0) */
+    .th-rank, .td-rank {
+        position: sticky;
+        left: 0;
+        z-index: 20;
+        background-color: var(--bg-primary); /* Use primary to hide scroll behind */
+        width: 50px;
+        min-width: 50px;
+        border-right: 1px solid #333;
+    }
+
+    /* 2. Stick the Player Name (Left 50px) */
+    .th-player, .td-player {
+        position: sticky;
+        left: 50px;
+        z-index: 20;
+        background-color: var(--bg-primary);
+        min-width: 140px;
+        max-width: 160px;
+        border-right: 2px solid var(--assore-red);
+        box-shadow: 4px 0 8px rgba(0,0,0,0.5);
+    }
+    
+    .player-flex .name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.9rem;
+    }
+
+    /* Fix background color on hover for sticky columns */
+    .data-table tbody tr:hover .td-rank,
+    .data-table tbody tr:hover .td-player {
+        background-color: #2E2E2E;
+    }
+}
