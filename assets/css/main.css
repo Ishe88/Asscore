@@ -360,7 +360,9 @@ h1, h2, h3 {
     }
 }
 
-/* --- LIVE TICKER --- */
+/* --- LIVE TICKER UPDATES --- */
+
+/* 1. Toggle Functionality */
 .live-ticker {
     position: fixed;
     top: var(--header-height); /* Starts exactly where header ends (100px) */
@@ -370,19 +372,27 @@ h1, h2, h3 {
     background: linear-gradient(90deg, var(--assore-red) 0%, #a00000 100%);
     z-index: 900; /* Below header (1000), above content */
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform-origin: top;
 }
 
 .live-ticker.hidden {
-    transform: translateY(-100%); /* Hides it if closed */
+    display: none; /* Completely removes it from flow */
+    /* Alternatively, for an animation effect use:
+    transform: scaleY(0);
+    opacity: 0;
+    */
 }
 
+/* 2. Enhanced Close Button Visibility */
 .live-ticker__container {
+    position: relative; /* Ensure absolute children position relative to this */
+    padding-right: 50px; /* Make space for the button so text doesn't overlap */
     display: flex;
     align-items: center;
     height: 100%;
     max-width: 100%;
-    padding: 0 1rem;
+    padding-left: 1rem;
     overflow: hidden; /* Important for scrolling */
 }
 
@@ -451,18 +461,30 @@ h1, h2, h3 {
 
 /* Close Button */
 .live-ticker__close {
-    background: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0; /* Stretch full height */
+    width: 44px; /* Large touch target */
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent dark bg */
     border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    padding: 5px;
-    margin-left: 1rem;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background-color 0.2s ease;
 }
 
 .live-ticker__close:hover {
-    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker on hover */
+}
+
+.live-ticker__close svg {
+    width: 16px;
+    height: 16px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)); /* Shadow to make the X pop */
 }
 
 /* Mobile Adjustments */
