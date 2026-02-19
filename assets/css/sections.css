@@ -1,0 +1,320 @@
+/* assets/css/sections.css */
+
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-primary);
+    overflow: hidden;
+}
+
+/* Background Handling - Use background image or video here */
+.hero__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Fallback/Slider images */
+.hero__bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    /* Darkened by default */
+    animation: zoomFade 20s infinite alternate;
+}
+
+@keyframes zoomFade {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(26, 26, 26, 0.4) 0%,
+            rgba(26, 26, 26, 0.8) 100%);
+    z-index: 1;
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    padding-top: var(--header-height);
+    /* Offset fixed header */
+}
+
+/* Scale for huge impact */
+.hero__title {
+    margin-bottom: var(--space-md);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hero__subtitle {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    max-width: 600px;
+    margin-bottom: var(--space-xl);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* --- ABOUT SECTION --- */
+.about-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .about-split {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about__img-wrapper {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+/* --- FACILITIES (Cards) --- */
+.facility-card {
+    height: 300px;
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.facility-card__bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow);
+}
+
+.facility-card:hover .facility-card__bg {
+    transform: scale(1.1);
+}
+
+.facility-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-lg);
+}
+
+/* --- COACHING (Profile Cards) --- */
+.coach-card {
+    text-align: center;
+    background: var(--bg-secondary);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    transition: transform var(--duration-normal);
+}
+
+.coach-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--assore-cyan);
+}
+
+.coach-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--assore-red);
+    margin: 0 auto var(--space-md);
+}
+
+/* --- MEMBERSHIP (Pricing) --- */
+.pricing-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    transition: transform var(--duration-normal);
+    position: relative;
+}
+
+.pricing-card--popular {
+    border-color: var(--assore-red);
+    box-shadow: 0 0 20px rgba(227, 30, 36, 0.2);
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.pricing-price {
+    font-size: 3rem;
+    font-family: var(--font-headline);
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
+    margin: var(--space-lg) 0;
+}
+
+.pricing-features li {
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.check-icon {
+    color: var(--assore-cyan);
+}
+
+/* --- TESTIMONIALS --- */
+.testimonial-card {
+    background: var(--bg-tertiary);
+    /* Darker */
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    position: relative;
+    border-left: 4px solid var(--assore-red);
+}
+
+.quote-icon {
+    font-size: 3rem;
+    color: var(--assore-red);
+    opacity: 0.3;
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+}
+
+/* --- LIVE TICKER --- */
+.live-ticker {
+    position: fixed;
+    /* Adjust based on mobile/desktop in media queries preferably, 
+       but standard is below header on desktop, bottom on mobile */
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, var(--assore-red) 0%, #a00000 100%);
+    z-index: 900;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform var(--duration-normal);
+}
+
+.live-ticker.hidden {
+    transform: translateY(-100%);
+}
+
+.ticker-content {
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+    padding-left: 100%;
+    /* Start off screen */
+    color: white;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .live-ticker {
+        top: auto;
+        bottom: 0;
+    }
+
+    .pricing-card--popular {
+        transform: scale(1);
+        /* Reset scale on mobile */
+    }
+}
+
+/* --- GALLERY (Masonry Grid) --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-md);
+    grid-auto-rows: 250px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}
+
+/* Masonry-ish via spanning */
+/* Make some items bigger for visual interest */
+.gallery-item:nth-child(3n+1) {
+    grid-row: span 2;
+}
+
+.gallery-item:nth-child(4n) {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+
+    .gallery-item:nth-child(3n+1),
+    .gallery-item:nth-child(4n) {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}

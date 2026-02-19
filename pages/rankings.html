@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankings | Assore Squash Series</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Oswald:wght@400;500;700&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Adjusted path for CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="main-header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="../index.html" class="header__logo">
+                    <img src="../assets/images/logo/assore.png" alt="Assore Squash Series">
+                </a>
+
+                <nav class="nav hidden-mobile">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="../index.html#series">Series</a></li>
+                        <li class="nav__item"><a href="rankings.html" class="active">Rankings</a></li>
+                        <li class="nav__item"><a href="tournaments.html">Tournaments</a></li>
+                        <li class="nav__item"><a href="../index.html#coaching">Coaching</a></li>
+                        <li class="nav__item"><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__actions hidden-mobile">
+                    <a href="../index.html#live" class="btn-live">
+                        <span class="live-indicator"></span>
+                        Live Scores
+                    </a>
+                </div>
+
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav__list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="rankings.html">Rankings</a></li>
+                <li><a href="tournaments.html">Tournaments</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="section section--dark" style="padding-top: 150px; padding-bottom: 2rem;">
+            <div class="container text-center">
+                <h1 class="h1">Official <span class="text-highlight">Standings</span></h1>
+                <p class="lead text-muted">Updated: 12 June 2026</p>
+            </div>
+        </section>
+
+        <!-- Rankings Table Section -->
+        <section class="section section--gray">
+            <div class="container">
+
+                <!-- Toggle/Tabs could go here -->
+
+                <div class="grid grid--2-cols">
+                    <!-- Men's Full Table -->
+                    <div class="card">
+                        <div class="card__header" style="height: auto; padding-top: 0;">
+                            <h2 class="h3"
+                                style="padding: 1.5rem; margin: 0; background: var(--bg-tertiary); border-bottom: 1px solid var(--border-primary);">
+                                Men's Top 20</h2>
+                        </div>
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                                <thead
+                                    style="background: var(--bg-primary); color: var(--text-secondary); font-family: var(--font-headline); text-transform: uppercase; font-size: 0.875rem;">
+                                    <tr>
+                                        <th style="padding: 1rem;">Pos</th>
+                                        <th style="padding: 1rem;">Player</th>
+                                        <th style="padding: 1rem; text-align: right;">Points</th>
+                                    </tr>
+                                </thead>
+                                <tbody
+                                    style="font-family: var(--font-mono); color: var(--text-primary); font-size: 0.9rem;">
+                                    <!-- Rows -->
+                                    <tr style="border-bottom: 1px solid var(--border-primary);">
+                                        <td style="padding: 1rem; width: 60px;">1</td>
+                                        <td style="padding: 1rem; font-weight: bold;">J. Anderson</td>
+                                        <td style="padding: 1rem; text-align: right; color: var(--assore-cyan);">12,500
+                                        </td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid var(--border-primary);">
+                                        <td style="padding: 1rem;">2</td>
+                                        <td style="padding: 1rem;">M. Le Roux</td>
+                                        <td style="padding: 1rem; text-align: right;">11,200</td>
+                                    </tr>
+                                    <!-- More rows... -->
+                                    <tr style="border-bottom: 1px solid var(--border-primary);">
+                                        <td style="padding: 1rem;">3</td>
+                                        <td style="padding: 1rem;">S. Brownlee</td>
+                                        <td style="padding: 1rem; text-align: right;">10,800</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid var(--border-primary);">
+                                        <td style="padding: 1rem;">4</td>
+                                        <td style="padding: 1rem;">D. Smith</td>
+                                        <td style="padding: 1rem; text-align: right;">9,500</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid var(--border-primary);">
+                                        <td style="padding: 1rem;">5</td>
+                                        <td style="padding: 1rem;">P. Sithole</td>
+                                        <td style="padding: 1rem; text-align: right;">8,900</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Women's Full Table -->
+                    <div class="card">
+                        <div class="card__header" style="height: auto; padding-top: 0;">
+                            <h2 class="h3"
+                                style="padding: 1.5rem; margin: 0; background: var(--bg-tertiary); border-bottom: 1px solid var(--border-primary);">
+                                Women's Top 20</h2>
+                        </div>
+                        <div style="overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                                <thead
+                                    style="background: var(--bg-primary); color: var(--text-secondary); font-family: var(--font-headline); text-transform: uppercase; font-size: 0.875rem;">
+                                    <tr>
+                                        <th style="padding: 1rem;">Pos</th>
+                                        <th style="padding: 1rem;">Player</th>
+                                        <th style="padding: 1rem; text-align: right;">Points</th>
+                                    </tr>
+                                </thead>
+                                <tbody
+                                    style="font-family: var(--font-mono); color: var(--text-primary); font-size: 0.9rem;">
+                                    <!-- Rows -->
+                                    <tr style="border-bottom: 1px solid var(--border-primary);">
+                                        <td style="padding: 1rem; width: 60px;">1</td>
+                                        <td style="padding: 1rem; font-weight: bold;">T. Russell</td>
+                                        <td style="padding: 1rem; text-align: right; color: var(--assore-cyan);">13,100
+                                        </td>
+                                    </tr>
+                                    <!-- More rows... -->
+                                    <tr style="border-bottom: 1px solid var(--border-primary);">
+                                        <td style="padding: 1rem;">2</td>
+                                        <td style="padding: 1rem;">A. Venter</td>
+                                        <td style="padding: 1rem; text-align: right;">11,800</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid var(--border-primary);">
+                                        <td style="padding: 1rem;">3</td>
+                                        <td style="padding: 1rem;">L. Khumalo</td>
+                                        <td style="padding: 1rem; text-align: right;">10,500</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid var(--border-primary);">
+                                        <td style="padding: 1rem;">4</td>
+                                        <td style="padding: 1rem;">C. Johnson</td>
+                                        <td style="padding: 1rem; text-align: right;">9,900</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid var(--border-primary);">
+                                        <td style="padding: 1rem;">5</td>
+                                        <td style="padding: 1rem;">B. Mokoena</td>
+                                        <td style="padding: 1rem; text-align: right;">9,250</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p>&copy; 2026 Assore Squash Series. Powered by Muttley Industries.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+</body>
+
+</html>

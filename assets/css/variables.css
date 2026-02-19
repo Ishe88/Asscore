@@ -1,0 +1,83 @@
+/* assets/css/variables.css */
+:root {
+  /* --- BRAND COLORS --- */
+  /* Primary Identity */
+  --assore-red: #E31E24;           /* Primary Action / Signal Red */
+  --assore-cyan: #5CC2E8;          /* Secondary Action / Electric Blue */
+  --assore-blue: #1B4E9B;          /* Dark Blue / Accent */
+  
+  /* Additional Accents (Prompt Requested) */
+  --court-orange: #FF6600;         /* Court Orange */
+  --electric-yellow: #FFFF00;      /* Electric Yellow */
+  --accent-gold: #D4AF37;          /* Trophy Gold */
+  
+  /* --- BACKGROUNDS --- */
+  --bg-primary: #1A1A1A;            /* Deep Charcoal */
+  --bg-secondary: #242424;          /* Card Background */
+  --bg-tertiary: #2E2E2E;           /* Elevated Elements */
+  --bg-overlay: rgba(26, 26, 26, 0.95); /* Modal/Overlay */
+  
+  /* --- TEXT COLORS --- */
+  --text-primary: #FFFFFF;          /* Primary Text */
+  --text-secondary: #B0B0B0;        /* Secondary Text */
+  --text-muted: #707070;            /* Disabled/Placeholder */
+  --text-highlight: var(--assore-cyan);
+  
+  /* --- FONTS --- */
+  --font-headline: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Roboto Mono', 'Courier New', monospace;
+  
+  /* --- FONT WEIGHTS --- */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+  
+  /* --- SPACING & LAYOUT --- */
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 1rem;       /* 16px */
+  --space-lg: 1.5rem;     /* 24px */
+  --space-xl: 2rem;       /* 32px */
+  --space-2xl: 3rem;      /* 48px */
+  --space-3xl: 4rem;      /* 64px */
+  --space-4xl: 6rem;      /* 96px */
+  
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  
+  --header-height: 80px;
+  --header-height-mobile: 60px;
+  
+  /* --- BORDERS & SHADOWS --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  --border-primary: #3A3A3A;
+  --border-accent: var(--assore-cyan);
+  
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --shadow-glow-cyan: 0 0 20px rgba(92, 194, 232, 0.5);
+  --shadow-glow-red: 0 0 20px rgba(227, 30, 36, 0.5);
+  
+  /* --- ANIMATIONS --- */
+  --duration-instant: 100ms;
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

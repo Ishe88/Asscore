@@ -1,0 +1,127 @@
+/* assets/css/layout.css */
+
+/* --- CONTAINER --- */
+.container {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0;
+}
+
+/* --- GRID SYSTEM --- */
+.grid {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+    .grid--2-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid--3-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 2 cols on tablet */
+    .grid--4-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid--3-cols {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid--4-cols {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --- FLEX UTILITIES --- */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-sm {
+    gap: var(--space-sm);
+}
+
+.gap-md {
+    gap: var(--space-md);
+}
+
+.gap-lg {
+    gap: var(--space-lg);
+}
+
+/* --- SECTION PADDING --- */
+.section {
+    padding: var(--space-3xl) 0;
+    position: relative;
+    overflow: hidden;
+    /* Prevent overflow issues */
+}
+
+.section--dark {
+    background-color: var(--bg-primary);
+}
+
+.section--gray {
+    background-color: var(--bg-secondary);
+}
+
+/* Header Spacer to prevent content hiding behind fixed header */
+.header-spacer {
+    height: var(--header-height);
+}
+
+/* --- VISIBILITY --- */
+.hidden-mobile {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hidden-mobile {
+        display: block;
+    }
+
+    .hidden-desktop {
+        display: none;
+    }
+}

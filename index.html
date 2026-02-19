@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Assore Squash Series - The Digital Stadium of South African Squash. Live rankings, tournaments, and exclusive coverage.">
+    <title>Assore Squash Series | The Digital Stadium</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Oswald:wght@400;500;700&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <!-- ============================================ -->
+    <!--              HEADER & NAV                   -->
+    <!-- ============================================ -->
+    <header class="header" id="main-header">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Logo -->
+                <a href="index.html" class="header__logo">
+                    <img src="assets/images/logo/assore.png" alt="Assore Squash Series">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav hidden-mobile">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#series">Series</a></li>
+                        <li class="nav__item"><a href="#rankings">Rankings</a></li>
+                        <li class="nav__item"><a href="#tournaments">Tournaments</a></li>
+                        <li class="nav__item"><a href="#coaching">Coaching</a></li>
+                        <li class="nav__item"><a href="#facilities">Facilities</a></li>
+                        <li class="nav__item"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Actions -->
+                <div class="header__actions hidden-mobile">
+                    <a href="#live" class="btn-live">
+                        <span class="live-indicator"></span>
+                        Live Scores
+                    </a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav__list">
+                <li><a href="#series">Series</a></li>
+                <li><a href="#rankings">Rankings</a></li>
+                <li><a href="#tournaments">Tournaments</a></li>
+                <li><a href="#coaching">Coaching</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- ============================================ -->
+    <!--              LIVE TICKER                    -->
+    <!-- ============================================ -->
+    <aside class="live-ticker" id="live-ticker">
+        <div class="container-fluid" style="overflow: hidden;">
+            <div class="ticker-content" id="ticker-content">
+                <!-- Data will be injected by JS or fallback here -->
+                <span>Joburg Open: J. Anderson (3) vs M. Le Roux (2) - LIVE</span>
+                <span>•</span>
+                <span>Court 4: Ladies Final - S. Brownlee leads 2-1</span>
+                <span>•</span>
+                <span>Next Match: U19 Boys Final starts at 14:00</span>
+                <span>•</span>
+                <span>Joburg Open: J. Anderson (3) vs M. Le Roux (2) - LIVE</span>
+                <span>•</span>
+                <span>Court 4: Ladies Final - S. Brownlee leads 2-1</span>
+                <span>•</span>
+                <span>Next Match: U19 Boys Final starts at 14:00</span>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- ============================================ -->
+        <!--              HERO SECTION                   -->
+        <!-- ============================================ -->
+        <section class="hero" id="home">
+            <!-- Background Slider/Image -->
+            <div class="hero__bg">
+                <div class="hero__bg-img" style="background-image: url('assets/images/hero-bg-2.jpg');"></div>
+                <!-- Note: Ideally JS would cycle classes here for slider -->
+            </div>
+
+            <div class="hero__overlay"></div>
+
+            <div class="container hero__content">
+                <span class="badge badge--accent" style="margin-bottom: 1rem;">The Digital Stadium</span>
+                <h1 class="hero__title">
+                    UNLEASH THE <span class="text-highlight">POWER</span><br>
+                    OF SQUASH
+                </h1>
+                <p class="hero__subtitle">
+                    Experience the intensity of the Assore Squash Series.
+                    Live rankings, match schedules, and exclusive coverage from South Africa's premier courts.
+                </p>
+                <div class="flex gap-md" style="flex-wrap: wrap;">
+                    <a href="#tournaments" class="btn btn--primary btn--lg">View Tournaments</a>
+                    <a href="#rankings" class="btn btn--outline btn--lg">Check Rankings</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--              ABOUT SECTION                  -->
+        <!-- ============================================ -->
+        <section class="section section--dark" id="series">
+            <div class="container">
+                <div class="about-split">
+                    <div class="about__text">
+                        <h2 class="h2">The Series <span class="text-highlight">Story</span></h2>
+                        <div style="width: 60px; height: 4px; background: var(--asscore-red); margin-bottom: 2rem;">
+                        </div>
+                        <p class="lead" style="margin-bottom: 1.5rem;">
+                            More than just a game. A movement.
+                        </p>
+                        <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                            The Assore Squash Series represents the pinnacle of squash in Southern Africa.
+                            We bring together elite athletes, state-of-the-art facilities, and a digital-first approach
+                            to elevate the sport to new heights.
+                        </p>
+
+                        <!-- Stats Counter -->
+                        <div class="grid grid--3-cols" style="margin-top: 3rem;">
+                            <div class="text-center">
+                                <h3 class="h2 text-accent" style="margin-bottom: 0;">12</h3>
+                                <span class="text-uppercase font-mono text-muted">Venues</span>
+                            </div>
+                            <div class="text-center">
+                                <h3 class="h2 text-accent" style="margin-bottom: 0;">500+</h3>
+                                <span class="text-uppercase font-mono text-muted">Athletes</span>
+                            </div>
+                            <div class="text-center">
+                                <h3 class="h2 text-accent" style="margin-bottom: 0;">R1M+</h3>
+                                <span class="text-uppercase font-mono text-muted">Prize Pool</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about__img-wrapper">
+                        <!-- Placeholder if image missing, ensuring structure always holds -->
+                        <img src="assets/images/hero-bg-1.jpg" alt="Squash Action"
+                            style="width: 100%; height: auto; display: block;">
+                        <div
+                            style="position: absolute; bottom: 20px; right: 20px; background: var(--bg-overlay); padding: 1rem; border-left: 3px solid var(--assore-cyan);">
+                            <span class="text-uppercase font-mono" style="color: white; font-weight: bold;">Since
+                                2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--              TOURNAMENTS SECTION            -->
+        <!-- ============================================ -->
+        <section class="section section--gray" id="tournaments">
+            <div class="container">
+                <div class="flex justify-between items-center" style="margin-bottom: 3rem;">
+                    <div>
+                        <h2 class="h2">Upcoming <span class="text-highlight">Battles</span></h2>
+                        <div style="width: 60px; height: 4px; background: var(--asscore-red);"></div>
+                    </div>
+                    <a href="tournaments.html" class="btn btn--outline" style="font-size: 0.9rem;">View All Events</a>
+                </div>
+
+                <div class="tournaments-track grid grid--3-cols"> <!-- Using 3 cols for responsive readability -->
+
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="card__header">
+                            <span class="card__badge badge badge--accent"
+                                style="position: absolute; top: 1rem; right: 1rem; z-index: 10;">Open Now</span>
+                            <img src="assets/images/venues/joburg.jpg" alt="Joburg Open" class="card__image">
+                        </div>
+                        <div class="card__body">
+                            <div class="flex justify-between font-mono text-highlight text-uppercase"
+                                style="font-size: 0.8rem; margin-bottom: 0.5rem;">
+                                <span>Johannesburg</span>
+                                <span>Mar 12-15</span>
+                            </div>
+                            <h3 class="card__title">The Joburg Open</h3>
+                            <p class="card__text">The season opener at Parkview. Top 16 ranked players automatically
+                                qualify.</p>
+                            <div class="card__footer flex justify-between items-center">
+                                <span class="text-uppercase font-bold text-white">Prize: R50k</span>
+                                <a href="#" class="btn btn--sm btn--primary">Enter Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="card__header">
+                            <img src="assets/images/venues/capetown.jpg" alt="Cape Town Classic" class="card__image">
+                        </div>
+                        <div class="card__body">
+                            <div class="flex justify-between font-mono text-highlight text-uppercase"
+                                style="font-size: 0.8rem; margin-bottom: 0.5rem;">
+                                <span>Cape Town</span>
+                                <span>Apr 05-09</span>
+                            </div>
+                            <h3 class="card__title">Cape Town Classic</h3>
+                            <p class="card__text">Coastal warfare. 32-player draw at the V&A Waterfront glass court.</p>
+                            <div class="card__footer flex justify-between items-center">
+                                <span class="text-uppercase font-bold text-white">Prize: R75k</span>
+                                <a href="#" class="btn btn--sm btn--outline">Details</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="card__header">
+                            <img src="assets/images/venues/durban.jpg" alt="Durban Slam" class="card__image">
+                        </div>
+                        <div class="card__body">
+                            <div class="flex justify-between font-mono text-highlight text-uppercase"
+                                style="font-size: 0.8rem; margin-bottom: 0.5rem;">
+                                <span>Durban</span>
+                                <span>May 20-24</span>
+                            </div>
+                            <h3 class="card__title">The Durban Slam</h3>
+                            <p class="card__text">High humidity, high intensity. The ultimate endurance test.</p>
+                            <div class="card__footer flex justify-between items-center">
+                                <span class="text-uppercase font-bold text-white">Prize: R40k</span>
+                                <a href="#" class="btn btn--sm btn--outline">Info</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--              RANKINGS SECTION               -->
+        <!-- ============================================ -->
+        <section class="section section--dark" id="rankings">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 3rem;">
+                    <h2 class="h2">Official <span class="text-highlight">Rankings</span></h2>
+                    <div style="width: 60px; height: 4px; background: var(--asscore-red); margin: 0 auto;"></div>
+                </div>
+
+                <div class="grid grid--2-cols">
+                    <!-- Men's Table -->
+                    <div class="card" style="border: 1px solid var(--border-primary);">
+                        <div
+                            style="padding: 1.5rem; border-bottom: 1px solid var(--border-primary); display: flex; justify-content: space-between;">
+                            <h3 class="h4" style="margin:0;">Men's Standings</h3>
+                            <a href="rankings.html" class="text-highlight font-bold text-uppercase"
+                                style="font-size: 0.875rem;">Full Table &rarr;</a>
+                        </div>
+                        <!-- Top Player -->
+                        <div
+                            style="padding: 1.5rem; background: linear-gradient(to right, rgba(227,30,36,0.1), transparent); display: flex; align-items: center; gap: 1rem;">
+                            <div style="position: relative;">
+                                <img src="assets/images/players/men-1.jpg" alt="J. Anderson"
+                                    style="width: 80px; height: 80px; border-radius: 50%; border: 2px solid white; object-fit: cover;">
+                                <span class="badge"
+                                    style="position: absolute; bottom: 0; right: 0; background: var(--accent-gold); color: black;">#1</span>
+                            </div>
+                            <div>
+                                <h4 style="margin:0; font-size: 1.25rem;">J. Anderson</h4>
+                                <span class="font-mono text-highlight font-bold">12,500 pts</span>
+                            </div>
+                        </div>
+                        <!-- List -->
+                        <ul style="padding: 0 1.5rem;">
+                            <li
+                                style="padding: 1rem 0; border-bottom: 1px solid var(--border-primary); display: flex; align-items: center;">
+                                <span class="font-mono text-muted" style="width: 30px;">02</span>
+                                <span style="flex-grow: 1; font-weight: 500;">M. Le Roux</span>
+                                <span class="font-mono text-muted">11,200</span>
+                            </li>
+                            <li
+                                style="padding: 1rem 0; border-bottom: 1px solid var(--border-primary); display: flex; align-items: center;">
+                                <span class="font-mono text-muted" style="width: 30px;">03</span>
+                                <span style="flex-grow: 1; font-weight: 500;">S. Brownlee</span>
+                                <span class="font-mono text-muted">10,800</span>
+                            </li>
+                            <li style="padding: 1rem 0; display: flex; align-items: center;">
+                                <span class="font-mono text-muted" style="width: 30px;">04</span>
+                                <span style="flex-grow: 1; font-weight: 500;">D. Smith</span>
+                                <span class="font-mono text-muted">9,500</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Women's Table -->
+                    <div class="card" style="border: 1px solid var(--border-primary);">
+                        <div
+                            style="padding: 1.5rem; border-bottom: 1px solid var(--border-primary); display: flex; justify-content: space-between;">
+                            <h3 class="h4" style="margin:0;">Women's Standings</h3>
+                            <a href="rankings.html" class="text-highlight font-bold text-uppercase"
+                                style="font-size: 0.875rem;">Full Table &rarr;</a>
+                        </div>
+                        <!-- Top Player -->
+                        <div
+                            style="padding: 1.5rem; background: linear-gradient(to right, rgba(92, 194, 232, 0.1), transparent); display: flex; align-items: center; gap: 1rem;">
+                            <div style="position: relative;">
+                                <img src="assets/images/players/women-1.jpg" alt="T. Russell"
+                                    style="width: 80px; height: 80px; border-radius: 50%; border: 2px solid white; object-fit: cover;">
+                                <span class="badge"
+                                    style="position: absolute; bottom: 0; right: 0; background: var(--accent-gold); color: black;">#1</span>
+                            </div>
+                            <div>
+                                <h4 style="margin:0; font-size: 1.25rem;">T. Russell</h4>
+                                <span class="font-mono text-highlight font-bold">13,100 pts</span>
+                            </div>
+                        </div>
+                        <!-- List -->
+                        <ul style="padding: 0 1.5rem;">
+                            <li
+                                style="padding: 1rem 0; border-bottom: 1px solid var(--border-primary); display: flex; align-items: center;">
+                                <span class="font-mono text-muted" style="width: 30px;">02</span>
+                                <span style="flex-grow: 1; font-weight: 500;">A. Venter</span>
+                                <span class="font-mono text-muted">11,800</span>
+                            </li>
+                            <li
+                                style="padding: 1rem 0; border-bottom: 1px solid var(--border-primary); display: flex; align-items: center;">
+                                <span class="font-mono text-muted" style="width: 30px;">03</span>
+                                <span style="flex-grow: 1; font-weight: 500;">L. Khumalo</span>
+                                <span class="font-mono text-muted">10,500</span>
+                            </li>
+                            <li style="padding: 1rem 0; display: flex; align-items: center;">
+                                <span class="font-mono text-muted" style="width: 30px;">04</span>
+                                <span style="flex-grow: 1; font-weight: 500;">C. Johnson</span>
+                                <span class="font-mono text-muted">9,900</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--              FACILITIES SECTION             -->
+        <!-- ============================================ -->
+        <section class="section section--gray" id="facilities">
+            <div class="container">
+                <h2 class="h2">Our <span class="text-highlight">Courts</span></h2>
+                <div style="width: 60px; height: 4px; background: var(--asscore-red); margin-bottom: 3rem;"></div>
+
+                <div class="grid grid--3-cols">
+                    <div class="facility-card">
+                        <img src="assets/images/venues/joburg.jpg" alt="Glass Court" class="facility-card__bg">
+                        <div class="facility-card__overlay">
+                            <span class="badge badge--accent"
+                                style="margin-bottom: 0.5rem; align-self: flex-start;">Premium</span>
+                            <h3 class="card__title text-white">The Glass Court</h3>
+                            <a href="#" class="btn btn--sm btn--outline">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <img src="assets/images/venues/pretoria.jpg" alt="Training Court" class="facility-card__bg">
+                        <div class="facility-card__overlay">
+                            <h3 class="card__title text-white">Training Courts</h3>
+                            <p class="text-white" style="font-size: 0.9rem;">10 Standard Courts</p>
+                        </div>
+                    </div>
+                    <div class="facility-card">
+                        <img src="assets/images/venues/durban.jpg" alt="Gym" class="facility-card__bg">
+                        <div class="facility-card__overlay">
+                            <h3 class="card__title text-white">High Performance Gym</h3>
+                            <p class="text-white" style="font-size: 0.9rem;">Athlete Specific Training</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--              COACHING SECTION               -->
+        <!-- ============================================ -->
+        <section class="section section--dark" id="coaching">
+            <div class="container">
+                <h2 class="h2 text-center">Elite <span class="text-highlight">Coaching</span></h2>
+                <div style="width: 60px; height: 4px; background: var(--asscore-red); margin: 0 auto 3rem;"></div>
+
+                <div class="grid grid--4-cols">
+                    <div class="coach-card">
+                        <img src="assets/images/players/men-1.jpg" alt="Coach" class="coach-img">
+                        <h4 class="h4">Mike Ross</h4>
+                        <p class="text-muted font-mono text-uppercase" style="font-size: 0.8rem;">Head Coach</p>
+                        <a href="#" class="text-highlight" style="font-size: 0.8rem; font-weight: bold;">View
+                            Profile</a>
+                    </div>
+                    <div class="coach-card">
+                        <img src="assets/images/players/women-1.jpg" alt="Coach" class="coach-img">
+                        <h4 class="h4">Sarah Jenkin</h4>
+                        <p class="text-muted font-mono text-uppercase" style="font-size: 0.8rem;">Junior Performance</p>
+                        <a href="#" class="text-highlight" style="font-size: 0.8rem; font-weight: bold;">View
+                            Profile</a>
+                    </div>
+                    <div class="coach-card">
+                        <img src="assets/images/players/men-1.jpg" alt="Coach" class="coach-img">
+                        <h4 class="h4">David Lee</h4>
+                        <p class="text-muted font-mono text-uppercase" style="font-size: 0.8rem;">Conditioning</p>
+                        <a href="#" class="text-highlight" style="font-size: 0.8rem; font-weight: bold;">View
+                            Profile</a>
+                    </div>
+                    <div class="coach-card">
+                        <img src="assets/images/players/women-1.jpg" alt="Coach" class="coach-img">
+                        <h4 class="h4">Emma Witt</h4>
+                        <p class="text-muted font-mono text-uppercase" style="font-size: 0.8rem;">Nutrition</p>
+                        <a href="#" class="text-highlight" style="font-size: 0.8rem; font-weight: bold;">View
+                            Profile</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--              MEMBERSHIP SECTION             -->
+        <!-- ============================================ -->
+        <section class="section section--gray" id="membership">
+            <div class="container">
+                <h2 class="h2 text-center">Join the <span class="text-highlight">Club</span></h2>
+                <div style="width: 60px; height: 4px; background: var(--assore-red); margin: 0 auto 3rem;"></div>
+
+                <div class="grid grid--3-cols">
+                    <div class="pricing-card">
+                        <h3 class="h3">Junior</h3>
+                        <p class="text-muted">Under 18s</p>
+                        <div class="pricing-price">R250<span
+                                style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check check-icon"></i> Access to all courts (Off-peak)</li>
+                            <li><i class="fa-solid fa-check check-icon"></i> Junior League Entry</li>
+                            <li><i class="fa-solid fa-check check-icon"></i> 1 Free Coaching Session</li>
+                        </ul>
+                        <a href="#" class="btn btn--outline btn--block" style="margin-top: 2rem;">Join Now</a>
+                    </div>
+
+                    <div class="pricing-card pricing-card--popular">
+                        <span class="badge badge--accent" style="position: absolute; top: 1rem; right: 1rem;">Most
+                            Popular</span>
+                        <h3 class="h3">Full Member</h3>
+                        <p class="text-muted">Unlimited Access</p>
+                        <div class="pricing-price">R650<span
+                                style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check check-icon"></i> Unlimited Court Access</li>
+                            <li><i class="fa-solid fa-check check-icon"></i> League Registration</li>
+                            <li><i class="fa-solid fa-check check-icon"></i> Gym Access Included</li>
+                            <li><i class="fa-solid fa-check check-icon"></i> Guest Passes (2/mo)</li>
+                        </ul>
+                        <a href="#" class="btn btn--primary btn--block" style="margin-top: 2rem;">Join Now</a>
+                    </div>
+
+                    <div class="pricing-card">
+                        <h3 class="h3">Family</h3>
+                        <p class="text-muted">Up to 4 Members</p>
+                        <div class="pricing-price">R1200<span
+                                style="font-size: 1rem; color: var(--text-muted);">/mo</span></div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check check-icon"></i> All Full Member Benefits</li>
+                            <li><i class="fa-solid fa-check check-icon"></i> Discounted Coaching</li>
+                            <li><i class="fa-solid fa-check check-icon"></i> Social Events Access</li>
+                        </ul>
+                        <a href="#" class="btn btn--outline btn--block" style="margin-top: 2rem;">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--              TESTIMONIALS SECTION           -->
+        <!-- ============================================ -->
+        <section class="section section--dark" id="testimonials">
+            <div class="container">
+                <h2 class="h2">Player <span class="text-highlight">Stories</span></h2>
+                <div style="width: 60px; height: 4px; background: var(--assore-red); margin-bottom: 3rem;"></div>
+
+                <div class="grid grid--2-cols">
+                    <div class="testimonial-card">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <p class="lead" style="margin-bottom: 1.5rem; font-style: italic;">"The facilities here are
+                            world-class. It's not just a club, it's a training ground for champions. The digital
+                            integration makes tracking my progress incredible."</p>
+                        <div class="flex items-center gap-md">
+                            <img src="assets/images/players/men-1.jpg" alt="Member"
+                                style="width: 50px; height: 50px; border-radius: 50%;">
+                            <div>
+                                <h4 class="h5" style="margin: 0;">David Miller</h4>
+                                <span class="font-mono text-muted text-uppercase" style="font-size: 0.8rem;">Club
+                                    Champion 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <p class="lead" style="margin-bottom: 1.5rem; font-style: italic;">"From the junior coaching to
+                            the social leagues, the atmosphere is electric. My game has improved massively in just six
+                            months."</p>
+                        <div class="flex items-center gap-md">
+                            <img src="assets/images/players/women-1.jpg" alt="Member"
+                                style="width: 50px; height: 50px; border-radius: 50%;">
+                            <div>
+                                <h4 class="h5" style="margin: 0;">Sarah Jenkins</h4>
+                                <span class="font-mono text-muted text-uppercase" style="font-size: 0.8rem;">Junior
+                                    Member</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--              CONTACT SECTION                -->
+        <!-- ============================================ -->
+        <section class="section section--gray" id="contact">
+            <div class="container">
+                <div class="grid grid--2-cols">
+                    <div>
+                        <h2 class="h2">Get in <span class="text-highlight">Touch</span></h2>
+                        <div style="width: 60px; height: 4px; background: var(--assore-red); margin-bottom: 2rem;">
+                        </div>
+                        <p class="lead text-muted" style="margin-bottom: 2rem;">Ready to hit the court? Book a session
+                            or ask us anything.</p>
+
+                        <div class="flex flex-col gap-md">
+                            <div class="flex items-center gap-md">
+                                <div class="social-icon" style="background: var(--assore-red); color: white;"><i
+                                        class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4 class="h5" style="margin: 0;">Location</h4>
+                                    <p class="text-muted">123 Squash Drive, Parkview, Johannesburg</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-md">
+                                <div class="social-icon" style="background: var(--assore-red); color: white;"><i
+                                        class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <h4 class="h5" style="margin: 0;">Phone</h4>
+                                    <p class="text-muted">+27 11 555 1234</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-md">
+                                <div class="social-icon" style="background: var(--assore-red); color: white;"><i
+                                        class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4 class="h5" style="margin: 0;">Email</h4>
+                                    <p class="text-muted">info@assoresquash.co.za</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="padding: 2rem;">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-input" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-input" placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-textarea" placeholder="How can we help?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--block">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!--              PARTNERS/FOOTER SECTION        -->
+        <!-- ============================================ -->
+        <div class="partners-strip section--gray" style="padding: 2rem 0; border-top: 1px solid var(--border-primary);">
+            <div class="container text-center">
+                <span class="text-uppercase font-bold text-muted"
+                    style="display: block; margin-bottom: 1rem; letter-spacing: 2px;">Official Partners</span>
+                <div class="flex justify-center gap-lg items-center" style="opacity: 0.7; flex-wrap: wrap;">
+                    <!-- Placeholder Logos -->
+                    <img src="assets/images/partners/partner-1.png" alt="Partner"
+                        style="height: 40px; filter: grayscale(100%);">
+                    <img src="assets/images/partners/partner-2.png" alt="Partner"
+                        style="height: 40px; filter: grayscale(100%);">
+                    <img src="assets/images/partners/partner-3.png" alt="Partner"
+                        style="height: 40px; filter: grayscale(100%);">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ============================================ -->
+    <!--              FOOTER                         -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+
+                <div class="footer__col">
+                    <a href="#" class="block mb-4">
+                        <img src="assets/images/logo/assore.png" alt="Assore Squash" style="height: 40px;">
+                    </a>
+                    <p class="text-muted" style="line-height: 1.6; font-size: 0.9rem;">
+                        The Digital Stadium of South African Squash.
+                        Elevating the game, one rally at a time.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="h5">Series</h4>
+                    <ul class="footer__nav text-muted">
+                        <li><a href="#tournaments">Tournaments</a></li>
+                        <li><a href="#rankings">Rankings</a></li>
+                        <li><a href="#players">Players</a></li>
+                        <li><a href="#results">Results</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="h5">Information</h4>
+                    <ul class="footer__nav text-muted">
+                        <li><a href="#">About Assore</a></li>
+                        <li><a href="#">Rule Book</a></li>
+                        <li><a href="#">Media Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="h5">Stay Updated</h4>
+                    <p class="text-muted mb-4" style="font-size: 0.9rem;">Get match results and updates.</p>
+                    <form class="flex gap-sm">
+                        <input type="email" placeholder="Email Address" class="form-input"
+                            style="padding: 0.5rem 1rem;">
+                        <button type="submit" class="btn btn--primary btn--sm">GO</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 Assore Squash Series. Powered by Muttley Industries.</p>
+                <div class="flex gap-md">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

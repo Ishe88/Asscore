@@ -1,0 +1,44 @@
+/* assets/css/main.css */
+
+/* 1. RESET */
+@import 'reset.css';
+
+/* 2. VARIABLES */
+@import 'variables.css';
+
+/* 3. CORE */
+@import 'typography.css';
+@import 'layout.css';
+
+/* 4. MODULES */
+@import 'components.css';
+@import 'navigation.css';
+@import 'sections.css';
+
+/* 5. PAGE SPECIFIC (If needed later) */
+/* e.g., @import 'pages/tournaments.css'; */
+
+/* --- GLOBAL DOCUMENT SETUP --- */
+html {
+    scroll-padding-top: var(--header-height);
+    /* For anchor links */
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+/* Helper for JS loaded state */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

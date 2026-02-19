@@ -1,0 +1,203 @@
+/* assets/css/components.css */
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8em 2em;
+    font-family: var(--font-headline);
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-out);
+    text-decoration: none;
+    border: 2px solid transparent;
+    /* Prepare for border transition */
+    white-space: nowrap;
+}
+
+.btn--primary {
+    background-color: var(--assore-red);
+    color: var(--text-primary);
+    border-color: var(--assore-red);
+    box-shadow: 0 4px 10px rgba(227, 30, 36, 0.3);
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+    background-color: transparent;
+    color: var(--assore-red);
+    box-shadow: 0 6px 15px rgba(227, 30, 36, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn--secondary {
+    background-color: var(--assore-cyan);
+    color: var(--bg-primary);
+    border-color: var(--assore-cyan);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+    background-color: transparent;
+    color: var(--assore-cyan);
+    box-shadow: 0 0 15px rgba(92, 194, 232, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn--outline {
+    background-color: transparent;
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+.btn--outline:hover,
+.btn--outline:focus {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
+/* Button Sizes */
+.btn--lg {
+    padding: 1em 2.5em;
+    font-size: 1.125rem;
+}
+
+.btn--sm {
+    padding: 0.5em 1.2em;
+    font-size: 0.875rem;
+}
+
+.btn--block {
+    width: 100%;
+}
+
+/* --- CARDS --- */
+.card {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform var(--duration-normal) var(--ease-out),
+        box-shadow var(--duration-normal) var(--ease-out);
+    border: 1px solid var(--border-primary);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--assore-red);
+}
+
+.card__header {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio */
+}
+
+.card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.card:hover .card__image {
+    transform: scale(1.05);
+}
+
+.card__body {
+    padding: var(--space-lg);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+.card__text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    flex-grow: 1;
+}
+
+.card__footer {
+    margin-top: auto;
+    border-top: 1px solid var(--border-primary);
+    padding-top: var(--space-md);
+}
+
+/* --- FORMS --- */
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-size: 0.875rem;
+    font-weight: var(--fw-bold);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.8em 1em;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    transition: border-color var(--duration-fast);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--assore-cyan);
+    box-shadow: 0 0 0 2px rgba(92, 194, 232, 0.2);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* --- BADGES --- */
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.75em;
+    font-size: 0.75rem;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    border-radius: var(--radius-full);
+    letter-spacing: 0.05em;
+}
+
+.badge--accent {
+    background-color: var(--assore-red);
+    color: white;
+}
+
+.badge--dark {
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,13 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor
+.vscode/
+.idea/
+
+# Dependencies (if any in future)
+node_modules/
+package-lock.json
+yarn.lock
